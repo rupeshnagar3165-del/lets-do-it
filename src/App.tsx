@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { InteractiveScrollBanner } from './components/InteractiveScrollBanner';
@@ -288,6 +289,9 @@ export default function App() {
           <span className="xs:hidden">Get Notes</span>
         </button>
       </div>
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
 
     </div>
   );
