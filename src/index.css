@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-handwriting: 'Caveat', cursive;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.font-serif-topper {
+  font-family: var(--font-serif);
+}
+
+.font-code {
+  font-family: var(--font-mono);
+}
+
+/* Ruled notebook line pattern for student aesthetic */
+.bg-notebook-ruled {
+  background-color: #fbfbf8;
+  background-image: 
+    linear-gradient(#f0f0ea 1px, transparent 1px),
+    linear-gradient(90deg, #f0f0ea 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-dark-grid {
+  background-color: #0b0f17;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Highlighter effect */
+.highlight-amber {
+  background: linear-gradient(104deg, rgba(251, 191, 36, 0) 0.9%, rgba(251, 191, 36, 0.28) 2.4%, rgba(251, 191, 36, 0.32) 5.8%, rgba(251, 191, 36, 0.2) 93%, rgba(251, 191, 36, 0.04) 96%, rgba(251, 191, 36, 0) 98%);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.highlight-emerald {
+  background: linear-gradient(104deg, rgba(52, 211, 153, 0) 0.9%, rgba(52, 211, 153, 0.25) 2.4%, rgba(52, 211, 153, 0.3) 5.8%, rgba(52, 211, 153, 0.2) 93%, rgba(52, 211, 153, 0.04) 96%, rgba(52, 211, 153, 0) 98%);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.highlight-cyan {
+  background: linear-gradient(104deg, rgba(34, 211, 238, 0) 0.9%, rgba(34, 211, 238, 0.25) 2.4%, rgba(34, 211, 238, 0.3) 5.8%, rgba(34, 211, 238, 0.2) 93%, rgba(34, 211, 238, 0.04) 96%, rgba(34, 211, 238, 0) 98%);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+
