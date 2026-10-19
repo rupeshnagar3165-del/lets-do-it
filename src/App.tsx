@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { InteractiveScrollBanner } from './components/InteractiveScrollBanner';
@@ -289,6 +290,8 @@ export default function App() {
         </button>
       </div>
 
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
